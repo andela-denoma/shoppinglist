@@ -1,47 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-				<meta charset="utf-8">
-				<title>Shopping-List</title>
-				<link rel="stylesheet" type="text/css" href="css/main.css">
-	</head>
-	<body>
-		<div class="wrapper">
-			<header>
-					<h1><span>S</span>"hopping tool"</h1>
-			</header>
-		</div>
-    <section>
-    	<form action = "" method="get">
-	    		<input type="text" name="text" id="item" title="Add to your shopping list" maxlength="20"></input>
-	        <input type="submit" name="add" id="submit" value="Add"></input>
-	       
-       </form>
-    </section>
-    <div id="listTable">
-    	<h2>Your Shopping List</h2>
-    		<p>There is no Item in Your Shopping List.
-    		<br>
-    		Add Item Here</p>
-    </div>	
-            <!--Shoppingtool Uncompleted List-->
-     		<div>
-            
-            <ul id="incomplete-task">
-            </ul>
-            </div>
-            <!--Shoppingtool completed List-->
-            <div id = "complete=task">
-            
-            <ul id = "complete"> 
-
-             </ul>
-            </div>
-          </div>
-          </div>
+  <head>
+    <title>Todo App</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8">    
+  </head>
+  <body>
+    <h1>Shopping List Application</h1>
+    <div class="wrapper">
+      <p>
+        <label for="new-task">Add Item</label><input id="new-task" type="text"><button>Add</button>
+      </p>
+      
+      <h3>Items Added</h3>
+      <ul id="incomplete-tasks">
+        <li><input type="checkbox"><label>Bags</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+        <li class="editMode"><input type="checkbox"><label>Shoes</label><input type="text" value="Go Shopping"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+        
+      </ul>
+      
+      <h3>Completed</h3>
+      <ul id="completed-tasks">
+        <li><input type="checkbox" checked><label>Utensils</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+      </ul>
     </div>
-   	  <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
-      <script src="js/application.js" type="text/javascript"></script>
-	</body>
-</html>
+    <script type="text/javascript" src="js/application.js"></script>
+  </body>
 </html>

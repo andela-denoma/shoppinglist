@@ -1,236 +1,119 @@
+/* Basic Style */
 body {
-  background: url("../img/background.jpg");
-  background-size: cover;
-  width: 100%;
-  background-repeat: no-repeat;
+  background: lightgreen;
+  font-family: Lato, sans-serif;
 }
-
-/*********************************
-      GENERAL
-*********************************/
-header,section,form{ 
-  width:100%;
+.wrapper{
+  display: block;
+  width: 500px;
+  margin: 100px auto 0;
 }
-header,form{
-  background-color: rgba(255,255,255,0.6);
+ul {
+  margin: 0;
+  padding: 0;
 }
-section,form,#input_list,.listWrapper,.listTable h2{
-  text-align: center;
-}
-
-/*********************************
-      HEADER 
-*********************************/
-header{
-  height:160px;
-  border:20px solid blue;
-  display: inline-block;
-}
-header div h1{
-  font-size: 5ex;
-  margin:0% 0 0% 5%;
-  font-weight: bold;
-  color:rgba(100,8,255,07);
-}
-header div p{
-  font-size: 3.2ex;
-  margin:-1% 0 1% 5%;
-  color:rgba(150,8,255,07);
-}
-header div h1 span{
-  font-size: 8ex;
-
-}
-header div img{
-  width: 20%;
-  height: 140px;
-  float: right;
-}
-/*********************************
-      SECTION
-*********************************/
-section{
-  padding-top: 5%;
-  top:10%;
-}
-/*********************************
-      SECTION FORM
-*********************************/
-form{
-  position: center;
-  text-align: center;
-}
-#input_list{
-  width:40%;
-  height:30px;
-  border:2px solid;
-  border-radius:10px;
-  color:#45f;
-  outline: none;
-  font-size: 1.3em;
-}
-#add_list{
-  width:10%;
-  padding: .7% 0 0.5%;
-  margin:0 0 0% 1%;
-  font-size:2ex;
-  background-color: lightgreen;
-  color:purple;
-  font-weight: bold;
-  border-radius: 12px;
-}
-form p{
-  font-size: 1.2em;
-  margin:0% 9% 0 0;
-  color:red;
-}
-.welcome p{
-  font-size: 5ex;
-  padding:6% 16% 10% 16%;
-  line-height: 1.2em;
-  color:white;
-  font-weight: bold;
-  text-shadow:0 1.5px #000;
-}
-/*********************************
-  SECTION LIST TABLE
-*********************************/
-.listWrapper{
-  width: 90%;
-  background-color:green;
-  margin-top: 2%;
-  
-}
-.listTable{
-  width:80%;
-  border:2px solid blue;
-  background-color:rgba(50,8,255,.3);
-  margin-left:10%;
-  border-radius: 50px;
-  position:absolute;  
-  text-align: left; 
-}
-.listTable h2{
-  font-size: 5ex;
-  font-weight: bold;
-  padding:2% 2% 0 0;
-  color: brown;
-  text-shadow:0 1.6px #000;
-}
-.roughList,.finalList{
-  margin-top: 2%;
-  width:45%;
-  margin-bottom: 2%;
-
-}
-.roughList{
-  margin-left: 5%;
-  background-color:lightblue;
+li {
   float: left;
 }
-.roughList h3,.finalList h3{
-  font-size: 2.2em;
-  margin:0 0 4% 10%;
-  color:blue;
+li, h3 {
+  font-size: 1em;
+  clear:both;
+  list-style:none;
 }
-.roughList ul li,.finalList ul li{
-  font-size: 2em;
-  color:darkgreen;
-  line-height: 1.5em;
+input, button {
+  outline: none;
+}
+button {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  margin: 10px 0 0;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}
+button:hover {
+  color: #333;
+}
+ /*Heading*/
+
+h3,
+label[for='new-task'] {
+  color: red;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 30px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+}
+input[type="text"] {
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+  height: 18px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
+}
+input[type="text"]:focus {
+  color: #333;
 }
 
-.finalList ul li{
-  color:gray;
-  font-style: italic;
+/* New Task*/
+label[for='new-task'] {
+  display: block;
+  margin: 0 0 20px;
+}
+input#new-task {
+  float: left;
+  width: 318px;
+}
+p > button:hover {
+  color: #0FC57C;
+}
+
+/* Task list */
+li {
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+li > input[type="checkbox"] {
+  margin: 0 10px;
+  position: relative;
+  top: 15px;
+}
+li > label {
+  font-size: 18px;
+  line-height: 40px;
+  width: 237px;
+  padding: 0 0 0 11px;
+}
+li >  input[type="text"] {
+  width: 226px;
+}
+li > .delete:hover {
+  color: #CF2323;
+}
+
+/* Completed */
+#completed-tasks label {
   text-decoration: line-through;
+  color: #888;
 }
-.finalList{
-  margin-right: 5%;
-  background-color: lightgreen;
-  float: right;
-}
-.hide_ppt{
+
+/* Edit Task */
+ul li input[type=text] {
   display:none;
 }
-.group:before, .group:after{
-  content: "";
-  display: table;
-}
-.group:after{
-  clear: both;
-}
-.group{
-  *zoom: 1; 
-}
-/*********************************
-    JAVASCRIPT ELEMENT  
-*********************************/
-.checkbox{
-    margin-right: 10px;
-    height: 20px;   
-    width: 20px;
-}
-#del{
-  font-size: 0.7em;
-  margin-left: 5%;
+
+ul li.editMode input[type=text] {
+  display:block;
 }
 
-
-
-/*********************************
-MOBILE PHONE RESOLUTION STYLING
-*********************************/
-@media screen and (max-width: 480px){
-  header div img{
-    width: 20%;
-    height: 70px;
-    float: right;
-  }
-  header{
-    height:135px;
-  }
-  header div h1{
-    font-size: 4ex;
-  }
-  header div p{
-    font-size: 2.5ex;
-  }
-  header div h1 span{
-    font-size: 5ex;
-  }
-  #input_list{
-    width:60%;
-  }
-  .listTable h2{
-    padding:15% 2% 0 0;
-  }
-  .welcome p{
-    font-size: 4.5ex;
-    padding:6% 5% 10% 5%;
-    line-height: 1.2em;
-  }
-  .roughList h3,.finalList h3{
-    font-size: 1.5em;
-    margin:0 0 2% 1%;
-    color:blue;
-  }
-  .checkbox{
-      margin-right: 5px;
-      height: 15px;   
-      width: 15px;
-  }
-  #del{
-    font-size: 1em;
-    margin-left: 4%;
-  }
-  .roughList ul li,.finalList ul li{
-    font-size: 1.3em;
-  }
-  .roughList, .finalList{
-    width: 80%;
-    margin-bottom: 4%;
-  }
+ul li.editMode label {
+  display:none;
 }
-
-
-
