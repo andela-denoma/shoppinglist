@@ -1,6 +1,6 @@
 /* Basic Style */
 body {
-  background: url('../img/bckimages.jpg');
+  background: url('../img/backgrd.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   font-family: Lato, sans-serif;
@@ -10,7 +10,7 @@ body {
   margin: 0 25%;
   text-align: center;
   display: block;
-  background: #c0ff3e;
+  background: lightblue;
 }
 h1 {
   font-size: 2em;
@@ -48,9 +48,8 @@ input, button {
 button {
   background: none;
   border: 0px;
-  color: #fff;
+  color: blue;
   font-size: 20px;
-  width: 60px;
   margin: 10px 0 0;
   font-family: Lato, sans-serif;
   cursor: pointer;
@@ -63,7 +62,7 @@ button:hover {
 h3,
 label[for='new-task'] {
   text-align: center;
-  color: #fff;
+  color: blue;
   font-weight: 700;
   font-size: 20px;
   padding: 30px 0 10px;
@@ -121,17 +120,17 @@ li > .delete:hover {
 }
 
 #incomplete-tasks{
-  border-top: 2px solid blue;
+  color: green;
+  border-top: 2px solid #63b8ff;
 }
 
 /* Completed */
 #completed-tasks{
-  border-top: 2px solid blue;
+  border-top: 2px solid #63b8ff
 }
 #completed-tasks label {
   text-decoration: line-through;
   color: #888;
-  margin-left: 2px;
 }
 
 /* Edit Task */
