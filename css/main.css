@@ -1,21 +1,43 @@
 /* Basic Style */
 body {
-  background: lightgreen;
+  background: url('../img/bckimages.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: Lato, sans-serif;
 }
 .wrapper{
+  width: 50%;
+  margin: 0 25%;
+  text-align: center;
   display: block;
-  width: 500px;
-  margin: 100px auto 0;
+  background: #c0ff3e;
 }
+h1 {
+  font-size: 2em;
+  margin:-1% 0 1% 5%;
+  color:#fff;
+}
+
+p {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 1em;
+  margin:-1% 0 1% 5%;
+  color:blue;
+}
+h1 span {
+  font-family:'Libre Baskerville', serif;
+  font-size: 2em;
+}
+
 ul {
   margin: 0;
   padding: 0;
 }
 li {
-  float: left;
+  text-align: center;
 }
 li, h3 {
+  text-align: center;
   font-size: 1em;
   clear:both;
   list-style:none;
@@ -26,8 +48,8 @@ input, button {
 button {
   background: none;
   border: 0px;
-  color: #888;
-  font-size: 15px;
+  color: #fff;
+  font-size: 20px;
   width: 60px;
   margin: 10px 0 0;
   font-family: Lato, sans-serif;
@@ -40,36 +62,37 @@ button:hover {
 
 h3,
 label[for='new-task'] {
-  color: red;
+  text-align: center;
+  color: #fff;
   font-weight: 700;
   font-size: 20px;
   padding: 30px 0 10px;
-  margin: 0;
   text-transform: uppercase;
 }
 input[type="text"] {
-  margin: 0;
   font-size: 18px;
   line-height: 18px;
   height: 18px;
-  padding: 10px;
+  padding: 5px;
   background: #fff;
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
+  text-align: center;
 }
 input[type="text"]:focus {
-  color: #333;
+  color: #ff1493;
+  text-align: center;
 }
 
 /* New Task*/
 label[for='new-task'] {
   display: block;
-  margin: 0 0 20px;
 }
 input#new-task {
-  float: left;
-  width: 318px;
+  text-align: center;
+  width: 300px;
+
 }
 p > button:hover {
   color: #0FC57C;
@@ -79,12 +102,10 @@ p > button:hover {
 li {
   overflow: hidden;
   padding: 20px 0;
-  border-bottom: 1px solid #eee;
 }
 li > input[type="checkbox"] {
-  margin: 0 10px;
+  margin: 10px;
   position: relative;
-  top: 15px;
 }
 li > label {
   font-size: 18px;
@@ -99,10 +120,18 @@ li > .delete:hover {
   color: #CF2323;
 }
 
+#incomplete-tasks{
+  border-top: 2px solid blue;
+}
+
 /* Completed */
+#completed-tasks{
+  border-top: 2px solid blue;
+}
 #completed-tasks label {
   text-decoration: line-through;
   color: #888;
+  margin-left: 2px;
 }
 
 /* Edit Task */
@@ -112,6 +141,7 @@ ul li input[type=text] {
 
 ul li.editMode input[type=text] {
   display:block;
+  margin: 23px;
 }
 
 ul li.editMode label {

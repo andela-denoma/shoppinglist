@@ -53,6 +53,7 @@ var shoppingList = {
   },
 
   addTask: function(){
+    
     console.log("Add task...");
     var listItem = this.createNewTaskElement(this.taskInput.value);
     this.incompleteTasksHolder.appendChild(listItem);
@@ -113,22 +114,14 @@ var shoppingList = {
   var editButton = taskListItem.querySelector("button.edit");
   var deleteButton = taskListItem.querySelector("button.delete");
   
-  //console.log(editButton.onclick);
+
   editButton.onclick = shoppingList.editTask;
-  
-  // deleteButton.addEventListener('click', shoppingList.deleteTask());
+ 
   deleteButton.onclick = shoppingList.deleteTask;
-  
   
   checkBox.onchange = checkBoxEventHandler;
   },
 };
+
   window.onload = shoppingList.initialize();
-  // document.getElementById('button').addEventListener("click", function(e){
-  //   e.preventDefault();
-  //   shoppingList.addTask();
-  // });
-  // document.getElementById('button').addEventListener("click", function());
-
-
-
+  
